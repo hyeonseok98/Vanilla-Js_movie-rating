@@ -27,7 +27,7 @@ fetch(
       movieCard.classList.add("movie-card");
 
       movieCard.innerHTML = `
-      <img src="https://image.tmdb.org/t/p/w500${data.backdrop_path}" alt="${data.title}" class="movie-img">
+      <img src="https://image.tmdb.org/t/p/w500${data.poster_path}" alt="${data.title}" class="movie-img">
       <div class="movie-title">${data.title}</div>
       <div class="movie-info">
         <p class="movie-overview">${data.overview}</p>
