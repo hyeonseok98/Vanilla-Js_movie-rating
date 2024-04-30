@@ -66,7 +66,7 @@ header {
 }
 
 /* movie-card */
-.card-container {
+#card-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,12 +126,12 @@ header {
   font-weight: 600;
 }
 
-.movie-vote-average {
+.movie-rating {
   font-size: 1.6rem;
   font-weight: 600;
 }
 
-.movie-vote-average-number {
+.movie-rating-number {
   color: yellowgreen;
   font-size: 2rem;
   font-weight: 600;
