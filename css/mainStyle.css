@@ -46,8 +46,8 @@ header {
 }
 
 #search-input {
-  width: 350px;
-  height: 30px;
+  width: 370px;
+  height: 35px;
   padding: 2px 8px;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -55,7 +55,7 @@ header {
 
 #search-button {
   width: 60px;
-  height: 30px;
+  height: 35px;
   border-radius: 5px;
 }
 
@@ -66,20 +66,25 @@ header {
 }
 
 /* movie-card */
-#card-container {
+#content-area {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
+  margin: 0 auto;
+  margin-right: 20px;
+}
+
+#card-container {
+  width: 90%;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  justify-content: space-evenly;
   gap: 40px;
   margin: 50px 0;
-  margin-right: 20px;
+  list-style: none;
 }
 
 .movie-card {
   position: relative;
-  width: 380px;
   height: 550px;
   padding: 10px;
   border-radius: 5px;
