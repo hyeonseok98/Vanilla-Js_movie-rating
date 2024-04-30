@@ -45,7 +45,7 @@ header {
   margin: 0 auto;
 }
 
-#search-movie {
+#search-input {
   width: 350px;
   height: 30px;
   padding: 2px 8px;
@@ -80,6 +80,7 @@ header {
   position: relative;
   width: 380px;
   height: 450px;
+  padding: 10px;
   border-radius: 5px;
   background-color: white;
   overflow: hidden;
@@ -112,7 +113,7 @@ header {
 
 .movie-img {
   width: 100%;
-  height: 82%;
+  height: 85%;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
@@ -120,8 +121,8 @@ header {
 .movie-title {
   display: flex;
   align-items: center;
-  margin-left: 20px;
-  margin-top: 15px;
+  margin-left: 10px;
+  margin-top: 10px;
   font-size: 1.8rem;
   font-weight: 600;
 }

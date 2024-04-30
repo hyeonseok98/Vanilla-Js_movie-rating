@@ -1,7 +1,7 @@
 import createMovieCard from "./movie.js";
 
 window.onload = () => {
-  document.getElementById("search-movie").focus();
+  document.getElementById("search-input").focus();
 };
 
 createMovieCard();
@@ -15,22 +15,21 @@ headerLogo.addEventListener("click", () => {
 });
 
 //movie-search
-const searchBox = document.getElementById("search-box");
-const searchInput = document.getElementById("search-movie");
-const searchButton = document.getElementById("search-button");
+const searchForm = document.querySelector("#search-box");
+const searchInput = document.querySelector("#search-input");
 
-searchButton.addEventListener("click", () => {
-  const searchText = searchInput.value.trim().toLowerCase();
+searchForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  handleSearch(searchInput.value);
+});
+
+function handleSearch(searchWord) {
   const movieCards = document.querySelectorAll(".movie-card");
 
-  movieCards.forEach((movieCard) => {
-    const title = movieCard.querySelector(".movie-title").textContent.trim().toLowerCase();
-    const isVisible = title.includes(searchText);
+  movieCards.forEach((card) => {
+    const title = card.querySelector(".movie-title").textContent.toLowerCase();
+    const searchedValue = searchWord.toLowerCase();
 
-    movieCard.style.display = isVisible ? "block" : "none";
+    card.style.display = title.includes(searchedValue) ? "block" : "none";
   });
-});
-
-searchBox.addEventListener("submit", (event) => {
-  event.preventDefault();
-});
+}
